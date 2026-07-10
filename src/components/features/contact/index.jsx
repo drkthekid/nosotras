@@ -105,7 +105,7 @@ const ContactPage = (props) => {
   };
 
   return (
-    <section className={cn("py-32", className)}>
+    <section className={cn("py-32", className)} id="contato">
       <div className="container mx-auto">
         <div className="flex flex-col gap-16 lg:flex-row lg:gap-24">
           <div className="flex flex-1 flex-col gap-10">
