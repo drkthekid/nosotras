@@ -5,7 +5,7 @@ import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
-export default function TestEnglish() {
+export default function TestSpanish() {
   return (
     <div
       className="relative flex min-h-screen items-center justify-center overflow-hidden px-6">

@@ -68,22 +68,18 @@ const Pricing = () => {
         <div className="flex w-full flex-col gap-6 lg:w-[55%] lg:max-w-[560px]">
           {plans.map((plan) => (
             <div
-              className={`rounded-2xl border p-6 shadow-[0_16px_45px_rgba(15,23,42,0.08)] ${
-                plan.isPopular
-                  ? "border-border/70 bg-background/70"
-                  : "border-border/70 bg-[#111827] text-white"
-              }`}
+              className="rounded-2xl border border-border/70 bg-background/80 p-6 shadow-[0_16px_45px_rgba(15,23,42,0.08)]"
               key={plan.name}
             >
               <div className="flex items-start justify-between gap-3">
                 <div className="flex flex-col">
-                  <span className={`text-xs font-semibold uppercase tracking-[0.2em] ${plan.isPopular ? "text-primary" : "text-slate-400"}`}>
+                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
                     Modalidade
                   </span>
-                  <h3 className={`mt-1 text-lg font-semibold ${plan.isPopular ? "text-foreground" : "text-white"}`}>
+                  <h3 className="mt-1 text-lg font-semibold text-foreground">
                     {plan.name}
                   </h3>
-                  <p className={`mt-1 text-sm ${plan.isPopular ? "text-muted-foreground" : "text-slate-300"}`}>
+                  <p className="mt-1 text-sm text-muted-foreground">
                     {plan.subtitle}
                   </p>
                 </div>
@@ -94,10 +90,10 @@ const Pricing = () => {
                 ) : null}
               </div>
 
-              <p className={`mt-5 text-4xl font-semibold tracking-[-0.03em] ${plan.isPopular ? "text-foreground" : "text-white"}`}>
+              <p className="mt-5 text-4xl font-semibold tracking-[-0.03em] text-foreground">
                 {plan.price}
               </p>
-              <p className={`mt-3 text-sm leading-7 ${plan.isPopular ? "text-muted-foreground" : "text-slate-300"}`}>
+              <p className="mt-3 text-sm leading-7 text-muted-foreground">
                 {plan.description}
               </p>
 
@@ -105,17 +101,17 @@ const Pricing = () => {
 
               <ul className="space-y-2.5">
                 {plan.features.map((feature) => (
-                  <li className={`flex items-start gap-2 text-sm ${plan.isPopular ? "text-foreground" : "text-white"}`} key={feature}>
-                    <CircleCheck className={`mt-0.5 h-4 w-4 shrink-0 ${plan.isPopular ? "text-primary" : "text-slate-300"}`} />
+                  <li className="flex items-start gap-2 text-sm text-foreground" key={feature}>
+                    <CircleCheck className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                     <span>{feature}</span>
                   </li>
                 ))}
               </ul>
 
               <Button
-                className={`mt-6 w-full ${plan.isPopular ? "" : "border-white/20 bg-white/10 text-white hover:bg-white/20"}`}
+                className="mt-6 w-full"
                 size="lg"
-                variant={plan.isPopular ? "default" : "outline"}
+                variant="default"
                 asChild
               >
                 <a href={plan.href} target="_blank" rel="noreferrer">

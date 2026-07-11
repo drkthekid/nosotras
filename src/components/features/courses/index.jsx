@@ -6,6 +6,7 @@ const courses = [
   {
     label: "Inglês",
     tagline: "Seja como John, curioso e estudioso",
+    href: "/cursos/ingles",
     title: "Domine o idioma mais falado no mundo dos negócios, tecnologia e entretenimento.",
     description:
       "Aulas dinâmicas com foco em conversação desde o primeiro dia, com uma abordagem prática e envolvente.",
@@ -25,6 +26,7 @@ const courses = [
     label: "Espanhol",
     tagline:
       "Seja como Lola, exploradora, curiosa e cheia de energia para viajar ao mundo do espanhol",
+    href: "/cursos/espanhol",
     title: "Aprenda o segundo idioma mais falado do mundo com professores que viveram na Argentina.",
     description:
       "Cultura, música e conversação em cada aula, com uma metodologia viva e conectada ao seu dia a dia.",
@@ -101,9 +103,9 @@ const Courses = ({
                       "mt-8 inline-flex w-fit items-center gap-2 rounded-full px-5 py-3 text-sm font-medium transition-colors",
                       course.buttonClass
                     )}
-                    href="#"
+                    href={course.href}
                   >
-                    Explorar
+                    Explorar curso e testar nível
                     <ArrowRight className="h-4 w-4" />
                   </a>
                 </div>
