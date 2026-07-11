@@ -11,8 +11,8 @@ import {
 } from "@/components/ui/navigation-menu";
 
 export const NavMenu = (props) => (
-  <NavigationMenu {...props}>
-    <NavigationMenuList className="data-[orientation=vertical]:-ms-2 data-[orientation=vertical]:flex-col data-[orientation=vertical]:items-start data-[orientation=vertical]:justify-start">
+  <NavigationMenu className="w-full items-start justify-start" {...props}>
+    <NavigationMenuList className="w-full flex-col items-start justify-start gap-1 self-start md:w-auto md:flex-row md:items-center md:justify-center md:gap-0">
       <NavigationMenuItem>
         <NavigationMenuLink className={navigationMenuTriggerStyle()} render={<Link href="/sobre" />}>
           Sobre
