@@ -6,31 +6,31 @@ import { Button } from "@/components/ui/button";
 const highlights = [
   {
     icon: MessageCircle,
-    title: "Foco em Conversação",
+    title: "Música e Cultura",
     description:
-      "70% do tempo de aula é dedicado à fala ativa.",
+      "Aprenda com canções, filmes e tradições dos países hispanos.",
   },
   {
     icon: Users,
-    title: "Material Atualizado",
+    title: "Vivência Argentina",
     description:
-      "Conteúdo baseado em situações reais do dia a dia.",
+      "Professoras com anos de experiência em Buenos Aires e Córdoba.",
   },
   {
     icon: Laptop,
-    title: "Business English",
+    title: "Conversação Real",
     description:
-      "Módulo opcional para ambiente corporativo.",
+      "Diálogos do dia a dia, expressões idiomáticas e gírias locais.",
   },
   {
     icon: BadgeCheck,
-    title: "Horários de Inglês",
+    title: "Preparação DELE",
     description:
-      "Turmas em grupo: terças e quintas às 19h. Aulas particulares: agenda flexível conforme disponibilidade do aluno e professor.",
+      "Preparação completa para o exame oficial de proficiência.",
   },
 ];
 
-export default function English() {
+export default function Spanish() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center px-6">
       <div
@@ -42,13 +42,13 @@ export default function English() {
             render={<Link href="#" />}>Sobre a Nosotras <ArrowUpRight className="ml-1 size-4" /></Badge>
           <h1
             className="mt-6 max-w-[17ch] font-bold text-4xl leading-[1.2]! tracking-[-0.04em] md:text-5xl lg:text-[2.75rem] xl:text-[3.25rem]">
-          Inglês que você
-
-            <br /> realmente fala
+            Aprenda Espanhol
+            com a cultura
+            na veia
           </h1>
           <p
             className="mt-4 max-w-[60ch] text-foreground/60 text-lg sm:mt-6 sm:text-xl/normal">
-         Nosso curso de Inglês é desenhado para brasileiros que querem ir além da gramática. Com método comunicativo, você pratica conversação real desde a primeira aula, desenvolvendo fluência para viagens, trabalho e vida pessoal.
+            O curso de Espanhol da Nosotras vai muito além do livro didático. Com professoras que viveram na Argentina, cada aula é uma imersão cultural: música, gastronomia, literatura e, claro, muita conversação.
           </p>
           <div className="mt-8 flex items-center gap-4 sm:mt-12">
             <Button className="rounded-full" size="lg">
@@ -64,7 +64,7 @@ export default function English() {
               <span>”</span>
             </div>
             <p className="text-lg leading-8 text-muted sm:text-xl">
-          "O Inglês abre portas para o mundo inteiro. Nosso compromisso é que cada aluno saia da aula mais confiante do que entrou."
+              "O Inglês abre portas para o mundo inteiro. Nosso compromisso é que cada aluno saia da aula mais confiante do que entrou."
             </p>
             <div className="mt-6 border-t border-white/10 pt-4">
               <p className="font-semibold text-primary">Prof. Júnior</p>

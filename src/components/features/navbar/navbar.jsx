@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <nav className="h-20 border-b bg-background">
       <div
-        className="mx-auto flex h-full max-w-(--breakpoint-xl) items-center justify-between px-4 sm:px-6 lg:px-8">
+        className="mx-auto  flex h-full max-w-(--breakpoint-xl) items-center justify-between px-4 sm:px-6 lg:px-8">
         <Logo />
 
         {/* Desktop Menu */}

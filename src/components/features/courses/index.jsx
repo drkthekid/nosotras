@@ -1,10 +1,11 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
 const courses = [
   {
     label: "Inglês",
+    tagline: "Seja como John, curioso e estudioso",
     title: "Domine o idioma mais falado no mundo dos negócios, tecnologia e entretenimento.",
     description:
       "Aulas dinâmicas com foco em conversação desde o primeiro dia, com uma abordagem prática e envolvente.",
@@ -13,14 +14,17 @@ const courses = [
       "Terças e quintas · 19h",
       "Prof. Ricardo",
     ],
-    image: "/mascote/lola.png",
-    alt: "Mascote Lola representando o curso de inglês",
+    image: "/mascote/john.png",
+    alt: "Mascote John, curioso e estudioso, representando o curso de inglês",
     accent: "text-primary",
+    blobClass: "bg-primary",
     buttonClass: "bg-primary text-primary-foreground hover:bg-primary/90",
-    imagePosition: "left",
+    imagePosition: "right",
   },
   {
     label: "Espanhol",
+    tagline:
+      "Seja como Lola, exploradora, curiosa e cheia de energia para viajar ao mundo do espanhol",
     title: "Aprenda o segundo idioma mais falado do mundo com professores que viveram na Argentina.",
     description:
       "Cultura, música e conversação em cada aula, com uma metodologia viva e conectada ao seu dia a dia.",
@@ -29,11 +33,12 @@ const courses = [
       "Período da manhã · Dias flexíveis",
       "Profª. Marina e Profª. Carla",
     ],
-    image: "/mascote/john.png",
-    alt: "Mascote John representando o curso de espanhol",
+    image: "/mascote/lola.png",
+    alt: "Mascote Lola, exploradora e curiosa, representando o curso de espanhol",
     accent: "text-secondary",
+    blobClass: "bg-secondary",
     buttonClass: "bg-secondary text-secondary-foreground hover:bg-secondary/90",
-    imagePosition: "right",
+    imagePosition: "left",
   },
 ];
 
@@ -57,52 +62,76 @@ const Courses = ({
         <div className="flex flex-col gap-6">
           {courses.map((course) => (
             <article
-              className="group overflow-hidden rounded-[2rem] border border-border/60 bg-muted/40 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
+              className="group relative overflow-hidden rounded-[2rem] bg-transparent shadow-none transition-all duration-300"
               key={course.label}
             >
-              <div className={cn("flex h-full flex-col lg:flex-row", course.imagePosition === "left" && "lg:flex-row-reverse") }>
-                  <div className="flex-1 p-8 sm:p-10 lg:p-12">
-                    <p className={cn("text-sm font-semibold uppercase tracking-[0.25em]", course.accent)}>
-                      {course.label}
-                    </p>
-                    <h3 className="mt-3 text-2xl font-semibold tracking-[-0.02em] sm:text-[1.7rem]">
-                      {course.title}
-                    </h3>
-                    <p className="mt-4 text-base leading-7 text-foreground/80">
-                      {course.description}
-                    </p>
+              <div
+                className={cn(
+                  "flex flex-col lg:flex-row lg:items-stretch",
+                  course.imagePosition === "left" && "lg:flex-row-reverse"
+                )}
+              >
+                <div className="flex flex-1 flex-col justify-center p-8 sm:p-10 lg:p-14">
+                  <p className={cn("text-sm font-semibold uppercase tracking-[0.25em]", course.accent)}>
+                    {course.label}
+                  </p>
+                  <h3 className="mt-3 text-2xl font-semibold tracking-[-0.02em] sm:text-[1.7rem]">
+                    {course.title}
+                  </h3>
+                  <p className="mt-4 text-base leading-7 text-foreground/80">
+                    {course.description}
+                  </p>
 
-                    <ul className="mt-8 space-y-3 text-sm text-foreground/80">
-                      {course.details.map((detail) => (
-                        <li key={detail} className="flex items-start gap-2">
-                          <span className={cn("mt-1 h-2.5 w-2.5 rounded-full", course.accent)} />
-                          <span>{detail}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  <ul className="mt-8 space-y-3 text-sm text-foreground/80">
+                    {course.details.map((detail) => (
+                      <li className="flex items-start gap-2" key={detail}>
+                        <span
+                          className={cn(
+                            "mt-1 h-2.5 w-2.5 shrink-0 rounded-full",
+                            course.accent.replace("text-", "bg-")
+                          )}
+                        />
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
 
-                    <a
-                      className={cn(
-                        "mt-8 inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium transition-colors",
-                        course.buttonClass
-                      )}
-                      href="#"
-                    >
-                      Saber mais
-                      <ArrowRight className="h-4 w-4" />
-                    </a>
-                  </div>
-
-                  <div className="flex items-center justify-center bg-background/70 p-6 sm:p-8 lg:w-[42%] lg:p-10">
-                    <img
-                      alt={course.alt}
-                      className="h-[220px] w-auto max-w-full object-contain drop-shadow-xl sm:h-[260px]"
-                      src={course.image}
-                    />
-                  </div>
+                  <a
+                    className={cn(
+                      "mt-8 inline-flex w-fit items-center gap-2 rounded-full px-5 py-3 text-sm font-medium transition-colors",
+                      course.buttonClass
+                    )}
+                    href="#"
+                  >
+                    Explorar
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
                 </div>
-              </article>
-            ))}
+
+                <div className="relative flex flex-1 flex-col items-center justify-center gap-4 overflow-hidden py-10 lg:py-10">
+                  <div
+                    aria-hidden="true"
+                    className={cn(
+                      "pointer-events-none absolute h-72 w-72 rounded-full opacity-20 blur-3xl",
+                      course.blobClass
+                    )}
+                  />
+                  <img
+                    alt={course.alt}
+                    className={cn(
+                      "relative h-[260px] w-auto max-w-full object-contain drop-shadow-2xl transition-transform duration-300 group-hover:scale-105 sm:h-[320px] lg:h-[400px]",
+                      course.imagePosition === "left" ? "lg:-mr-8" : "lg:-ml-8"
+                    )}
+                    src={course.image}
+                  />
+                  <p className="relative max-w-[26ch] text-center text-sm font-medium italic text-foreground/70">
+                    <Sparkles className={cn("mr-1 inline h-3.5 w-3.5 align-text-bottom", course.accent)} />
+                    {course.tagline}
+                  </p>
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

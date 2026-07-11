@@ -1,6 +1,6 @@
 import { Courses } from "@/components/features/courses";
 import Hero from "@/components/features/hero";
-import Features from "@/components/features/metodoly";
+import Features from "@/components/features/metodology";
 import {ContactPage} from "@/components/features/contact";
 import Navbar from "@/components/features/navbar/navbar";
 import Image from "next/image";

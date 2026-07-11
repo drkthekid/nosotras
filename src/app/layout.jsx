@@ -1,15 +1,25 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import {ThemeProvider} from "@/components/features/theme/theme-provider";
+import { ThemeProvider } from "@/components/features/theme/theme-provider";
+import { Quicksand, Outfit, Lora, Fira_Code } from 'next/font/google';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const quicksand = Quicksand({
+  subsets: ['latin'],
+  variable: '--font-quicksand', 
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const outfit = Outfit({
+  subsets: ['latin'],
+  variable: '--font-outfit',
+});
+
+const lora = Lora({
+  subsets: ['latin'],
+  variable: '--font-lora',
+});
+
+const firaCode = Fira_Code({
+  subsets: ['latin'],
+  variable: '--font-fira-code',
 });
 
 export const metadata = {
@@ -20,10 +30,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <>
-      <html lang="pt-br" suppressHydrationWarning className="scroll-smooth">
-       <head>
-        <link rel="icon" href="/logo/logo-sem-fundo.png" sizes="any" />
-      </head>
+      <html 
+        lang="pt-br" 
+        suppressHydrationWarning 
+        className={`scroll-smooth ${quicksand.variable} ${outfit.variable} ${lora.variable} ${firaCode.variable}`}
+      >
+        <head>
+          <link rel="icon" href="/logo/logo-sem-fundo.png" sizes="any" />
+        </head>
         <body>
           <ThemeProvider
             attribute="class"
