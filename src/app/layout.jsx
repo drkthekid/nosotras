@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
           enableSystem
         >
           <SmoothScroll>
-            <div style={{ overflowX: "hidden" }}>{children}</div>
+            {children}
           </SmoothScroll>
         </ThemeProvider>
       </body>
