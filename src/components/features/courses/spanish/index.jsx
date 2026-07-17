@@ -14,19 +14,13 @@ const highlights = [
     icon: Users,
     title: "Vivência Argentina",
     description:
-      "Professoras com anos de experiência em Buenos Aires e Córdoba.",
+      "Professoras com anos de experiência na argentina.",
   },
   {
     icon: Laptop,
     title: "Conversação Real",
     description:
       "Diálogos do dia a dia, expressões idiomáticas e gírias locais.",
-  },
-  {
-    icon: BadgeCheck,
-    title: "Preparação DELE",
-    description:
-      "Preparação completa para o exame oficial de proficiência.",
   },
 ];
 
@@ -74,7 +68,7 @@ export default function Spanish() {
       </div>
 
       <div className="mx-auto mt-10 w-full max-w-(--breakpoint-xl)">
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {highlights.map((item) => {
             const Icon = item.icon;
 
