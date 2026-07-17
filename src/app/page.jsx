@@ -22,19 +22,19 @@ export default function Home() {
         </section>
       </Reveal>
 
-      <Reveal delay={0.1}>
+      <Reveal delay={0.01}>
         <Features />
       </Reveal>
 
-      <Reveal delay={0.1}>
+   <Reveal delay={0.01}>
         <TestIdiom />
       </Reveal>
 
-      <Reveal delay={0.1}>
+      <Reveal delay={0.01}>
         <ContactPage />
       </Reveal>
 
-      <Reveal delay={0.1}>
+    <Reveal delay={0.01}>
         <FAQ />
       </Reveal>
 

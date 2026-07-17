@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const rotatingWords = [
@@ -13,6 +14,12 @@ const rotatingWords = [
 ];
 
 const mascots = ["/mascote/john.png", "/mascote/lola.png", "/mascote/juntos.png"];
+
+const WHATSAPP_NUMBER = "5511999556612";
+const whatsappMessage = encodeURIComponent(
+  "Olá! Vim pelo site da Nosotras e gostaria de agendar uma aula experimental."
+);
+const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;
 
 export default function Hero() {
   const [wordIndex, setWordIndex] = useState(0);
@@ -33,7 +40,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 py-12">
+    <div className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 py-8 sm:py-12">
       {/* Fundo animado */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -left-24 top-10 h-96 w-96 animate-[blob-move_9s_ease-in-out_infinite] rounded-full bg-primary/30 blur-3xl" />
@@ -59,7 +66,7 @@ export default function Hero() {
 
       <div className="mx-auto grid w-full max-w-screen-xl gap-16 md:grid-cols-2">
         <div className="animate-in fade-in slide-in-from-bottom-4 text-center duration-700 md:text-left">
-          <h1 className="mx-auto mt-6 max-w-[19ch] text-5xl font-bold leading-[1.1] tracking-[-0.04em] md:mx-0 md:text-6xl lg:text-[3.25rem] xl:text-[3.75rem]">
+          <h1 className="mx-auto mt-2 max-w-[19ch] text-4xl font-bold leading-[1.1] tracking-[-0.04em] sm:mt-6 sm:text-5xl md:mx-0 md:text-6xl lg:text-[3.25rem] xl:text-[3.75rem]">
             <span className="block">Aprenda inglês e espanhol</span>
             <span className="block text-secondary">com quem realmente</span>
             <span className="relative block h-[1.2em] overflow-hidden text-primary">
@@ -78,21 +85,28 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="mx-auto mt-6 max-w-[62ch] text-xl text-foreground/60 sm:mt-8 sm:text-2xl/normal md:mx-0">
+          <p className="mx-auto mt-4 max-w-[62ch] text-lg text-foreground/60 sm:mt-8 sm:text-2xl/normal md:mx-0">
             Aulas online ao vivo, turmas reduzidas de até 5 alunos, professores certificados e uma metodologia que trata cada aluno como único. Sua jornada no idioma começa aqui.
           </p>
 
-          <div className="mt-10 flex flex-col gap-4 sm:mt-12 sm:flex-row sm:justify-center md:justify-start">
-            <Button className="rounded-full font-bold" size="lg">
+          <div className="mt-6 flex flex-col gap-3 sm:mt-12 sm:flex-row sm:justify-center sm:gap-4 md:justify-start">
+            <Button
+              className="rounded-full font-bold"
+              nativeButton={false}
+              render={<a href={whatsappLink} rel="noopener noreferrer" target="_blank" />}
+              size="lg"
+            >
+              <MessageCircle className="mr-2 h-5 w-5" />
               Agendar Aula Experimental
-              <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button
               className="rounded-full border-secondary font-bold text-secondary hover:bg-secondary/10"
+              nativeButton={false}
+              render={<Link href="#teste-de-nivel" />}
               size="lg"
               variant="outline"
             >
-              Fazer teste de nível
+              Fazer Teste de nivel
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>

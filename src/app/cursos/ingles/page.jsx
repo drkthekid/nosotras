@@ -9,7 +9,10 @@ export default function Ingles() {
     <>
     <Navbar/>
      <English/>
+
+     <section className="bg-accent">
      <Team/>
+     </section>
      <TestEnglish/>
      <Footer/>
     </>

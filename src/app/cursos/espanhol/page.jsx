@@ -7,11 +7,14 @@ import TestSpanish from "@/components/features/courses/spanish/test";
 export default function Espanhol() {
   return (
     <>
-    <Navbar/>
-     <Spanish/>
-     <TeamSpanish/>
-     <TestSpanish/>
-     <Footer/>
+      <Navbar />
+      <Spanish />
+      <section className="bg-accent">
+
+        <TeamSpanish />
+      </section>
+      <TestSpanish />
+      <Footer />
     </>
   );
 }
