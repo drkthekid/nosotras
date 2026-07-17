@@ -1,4 +1,4 @@
-import { ArrowUpRight, BadgeCheck, Laptop, MessageCircle, Users } from "lucide-react";
+import { ArrowUpRight, Clock3, Video, MessageCircle, Users } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -17,16 +17,15 @@ const highlights = [
       "Conteúdo baseado em situações reais do dia a dia.",
   },
   {
-    icon: Laptop,
-    title: "Business English",
-    description:
-      "Módulo opcional para ambiente corporativo.",
+    icon: Video,
+    title: "Aulas 100% ao Vivo",
+    description: "Nada de vídeos gravados: você aprende com um professor de verdade, em tempo real.",
   },
   {
-    icon: BadgeCheck,
+    icon: Clock3,
     title: "Horários de Inglês",
     description:
-      "Turmas em grupo: terças e quintas às 19h. Aulas particulares: agenda flexível conforme disponibilidade do aluno e professor.",
+      "Agenda flexível pela manhã, adaptada à disponibilidade do aluno e do professor.",
   },
 ];
 
@@ -42,13 +41,13 @@ export default function English() {
             render={<Link href="#" />}>Sobre a Nosotras <ArrowUpRight className="ml-1 size-4" /></Badge>
           <h1
             className="mt-6 max-w-[17ch] font-bold text-4xl leading-[1.2]! tracking-[-0.04em] md:text-5xl lg:text-[2.75rem] xl:text-[3.25rem]">
-          Inglês que você
+            Inglês que você
 
             <br /> realmente fala
           </h1>
           <p
             className="mt-4 max-w-[60ch] text-foreground/60 text-lg sm:mt-6 sm:text-xl/normal">
-         Nosso curso de Inglês é desenhado para brasileiros que querem ir além da gramática. Com método comunicativo, você pratica conversação real desde a primeira aula, desenvolvendo fluência para viagens, trabalho e vida pessoal.
+            Nosso curso de Inglês é desenhado para brasileiros que querem ir além da gramática. Com método comunicativo, você pratica conversação real desde a primeira aula, desenvolvendo fluência para viagens, trabalho e vida pessoal.
           </p>
           <div className="mt-8 flex items-center gap-4 sm:mt-12">
             <Button className="rounded-full" size="lg">
@@ -64,7 +63,7 @@ export default function English() {
               <span>”</span>
             </div>
             <p className="text-lg leading-8 text-muted sm:text-xl">
-          "O Inglês abre portas para o mundo inteiro. Nosso compromisso é que cada aluno saia da aula mais confiante do que entrou."
+              "O Inglês abre portas para o mundo inteiro. Nosso compromisso é que cada aluno saia da aula mais confiante do que entrou."
             </p>
             <div className="mt-6 border-t border-white/10 pt-4">
               <p className="font-semibold text-primary">Prof. Júnior</p>

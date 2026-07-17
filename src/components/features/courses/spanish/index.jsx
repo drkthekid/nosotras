@@ -1,4 +1,4 @@
-import { ArrowUpRight, BadgeCheck, Laptop, MessageCircle, Users } from "lucide-react";
+import { ArrowUpRight, Clock3, Laptop, MessageCircle, Users } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -21,6 +21,12 @@ const highlights = [
     title: "Conversação Real",
     description:
       "Diálogos do dia a dia, expressões idiomáticas e gírias locais.",
+  },
+  {
+    icon: Clock3,
+    title: "Horários de Espanhol",
+    description:
+      "Às terças e quintas, às 19h",
   },
 ];
 
@@ -58,17 +64,17 @@ export default function Spanish() {
               <span>”</span>
             </div>
             <p className="text-lg leading-8 text-muted sm:text-xl">
-              "O Inglês abre portas para o mundo inteiro. Nosso compromisso é que cada aluno saia da aula mais confiante do que entrou."
+              "O Espanhol conecta você a todo um continente de culturas e histórias. Nosso compromisso é que cada aluno saia da aula mais confiante do que entrou."
             </p>
             <div className="mt-6 border-t border-white/10 pt-4">
-              <p className="font-semibold text-primary">Prof. Júnior</p>
+              <p className="font-semibold text-primary">Prof. Júlia</p>
             </div>
           </div>
         </div>
       </div>
 
       <div className="mx-auto mt-10 w-full max-w-(--breakpoint-xl)">
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {highlights.map((item) => {
             const Icon = item.icon;
 
