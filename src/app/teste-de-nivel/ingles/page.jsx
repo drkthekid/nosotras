@@ -27,7 +27,7 @@ export default function TesteDeNivelIngles() {
                 <LevelQuiz
                     accentClass="text-primary"
                     language="Inglês"
-                    mascot={{ src: "/mascote/john.png", alt: "Mascote John" }}
+                    mascot={{ src: "/mascote/john-feliz.png", alt: "Mascote John" }}
                     questions={englishQuestions}
                 />
 

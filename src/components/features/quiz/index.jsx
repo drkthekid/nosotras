@@ -57,7 +57,7 @@ export function LevelQuiz({ language, mascot, questions, accentClass = "text-pri
     return (
       <motion.div
         animate={{ opacity: 1, y: 0 }}
-        className="relative mx-auto w-full max-w-xl overflow-hidden rounded-[2rem] border border-border/60 bg-card p-8 text-center shadow-xl sm:p-12"
+        className="relative mx-auto w-full max-w-xl overflow-hidden rounded-[2rem] border border-primary/15 bg-background/80 p-8 text-center shadow-xl ring-1 ring-primary/10 backdrop-blur-xl sm:p-12"
         initial={{ opacity: 0, y: 20 }}
         transition={{ duration: 0.5 }}
       >
@@ -68,7 +68,7 @@ export function LevelQuiz({ language, mascot, questions, accentClass = "text-pri
 
         <img
           alt={mascot.alt}
-          className="relative mx-auto h-32 w-auto object-contain drop-shadow-xl"
+          className="relative mx-auto h-50 w-auto object-contain drop-shadow-xl"
           src={mascot.src}
         />
 
@@ -126,7 +126,7 @@ export function LevelQuiz({ language, mascot, questions, accentClass = "text-pri
       <AnimatePresence mode="wait">
         <motion.div
           animate={{ opacity: 1, x: 0 }}
-          className="rounded-[2rem] border border-border/60 bg-card p-8 shadow-lg sm:p-10"
+          className="rounded-[2rem] border border-primary/15 bg-background/80 p-8 shadow-lg ring-1 ring-primary/10 backdrop-blur-xl sm:p-10"
           exit={{ opacity: 0, x: -20 }}
           initial={{ opacity: 0, x: 20 }}
           key={currentIndex}
@@ -145,10 +145,10 @@ export function LevelQuiz({ language, mascot, questions, accentClass = "text-pri
                 <button
                   className={cn(
                     "flex items-center justify-between rounded-xl border px-5 py-3.5 text-left text-base transition-all duration-200",
-                    !answered && "border-border/60 hover:border-primary hover:bg-primary/5",
+                    !answered && "border-border/60 bg-background/40 hover:border-primary hover:bg-primary/5",
                     answered && isCorrect && "border-primary bg-primary/10 text-primary",
                     answered && isSelected && !isCorrect && "border-destructive bg-destructive/10 text-destructive",
-                    answered && !isSelected && !isCorrect && "border-border/40 opacity-50"
+                    answered && !isSelected && !isCorrect && "border-border/40 bg-background/20 opacity-50"
                   )}
                   disabled={answered}
                   key={option}
