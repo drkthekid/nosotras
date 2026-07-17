@@ -1,6 +1,7 @@
 import "./globals.css";
 import { ThemeProvider } from "@/components/features/theme/theme-provider";
 import { SmoothScroll } from "@/components/providers/smooth-scroll";
+import { PageTransition } from "@/components/providers/page-transition";
 import { Quicksand, Outfit, Lora, Fira_Code } from "next/font/google";
 
 const quicksand = Quicksand({
@@ -45,7 +46,9 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
           enableSystem
         >
-          <SmoothScroll>{children}</SmoothScroll>
+          <SmoothScroll>
+            <div style={{ overflowX: "hidden" }}>{children}</div>
+          </SmoothScroll>
         </ThemeProvider>
       </body>
     </html>
