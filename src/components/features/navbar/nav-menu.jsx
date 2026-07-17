@@ -9,6 +9,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { SmartAnchor } from "@/components/ui/smart-anchor";
 
 export const NavMenu = (props) => (
   <NavigationMenu className="w-full items-start justify-start" {...props}>
@@ -50,7 +51,10 @@ export const NavMenu = (props) => (
       </NavigationMenuItem>
 
       <NavigationMenuItem>
-        <NavigationMenuLink className={navigationMenuTriggerStyle()} render={<Link href="#contato" />}>
+        <NavigationMenuLink
+          className={navigationMenuTriggerStyle()}
+          render={<SmartAnchor id="contato" />}
+        >
           Contato
         </NavigationMenuLink>
       </NavigationMenuItem>

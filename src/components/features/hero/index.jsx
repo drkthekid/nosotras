@@ -57,9 +57,9 @@ export default function Hero() {
         }
       `}</style>
 
-      <div className="mx-auto grid w-full max-w-screen-xl gap-16 lg:grid-cols-2">
-        <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-          <h1 className="mt-6 max-w-[19ch] text-5xl font-bold leading-[1.1] tracking-[-0.04em] md:text-6xl lg:text-[3.25rem] xl:text-[3.75rem]">
+      <div className="mx-auto grid w-full max-w-screen-xl gap-16 md:grid-cols-2">
+        <div className="animate-in fade-in slide-in-from-bottom-4 text-center duration-700 md:text-left">
+          <h1 className="mx-auto mt-6 max-w-[19ch] text-5xl font-bold leading-[1.1] tracking-[-0.04em] md:mx-0 md:text-6xl lg:text-[3.25rem] xl:text-[3.75rem]">
             <span className="block">Aprenda inglês e espanhol</span>
             <span className="block text-secondary">com quem realmente</span>
             <span className="relative block h-[1.2em] overflow-hidden text-primary">
@@ -78,11 +78,11 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="mt-6 max-w-[62ch] text-xl text-foreground/60 sm:mt-8 sm:text-2xl/normal">
+          <p className="mx-auto mt-6 max-w-[62ch] text-xl text-foreground/60 sm:mt-8 sm:text-2xl/normal md:mx-0">
             Aulas online ao vivo, turmas reduzidas de até 5 alunos, professores certificados e uma metodologia que trata cada aluno como único. Sua jornada no idioma começa aqui.
           </p>
 
-          <div className="mt-10 flex flex-col gap-4 sm:mt-12 sm:flex-row">
+          <div className="mt-10 flex flex-col gap-4 sm:mt-12 sm:flex-row sm:justify-center md:justify-start">
             <Button className="rounded-full font-bold" size="lg">
               Agendar Aula Experimental
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -98,7 +98,8 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="mt-auto flex items-center justify-center lg:justify-end">
+        {/* Mascotes: escondidos no mobile, visíveis a partir do md */}
+        <div className="mt-auto hidden items-center justify-center md:flex md:justify-end">
           <div className="relative flex w-full max-w-[720px] items-center justify-center overflow-hidden p-2 sm:p-4 lg:-mt-4 lg:p-0">
             {/* Luz vinda de baixo para cima */}
             <div

@@ -45,7 +45,7 @@ const iconHoverClasses = {
 
 const Features = () => {
   return (
-    <div className="px-6 py-20">
+    <div className="px-6 py-20 bg-accent">
       <div className="flex flex-col items-center justify-center text-center">
         <h2 className="max-w-3xl font-extrabold text-4xl tracking-[-0.045em] ">
           O que nos torna

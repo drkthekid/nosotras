@@ -6,10 +6,13 @@ import Navbar from "@/components/features/navbar/navbar";
 import FAQ from "@/components/features/faq";
 import Footer from "@/components/features/footer";
 import { Reveal } from "@/components/ui/reveal";
+import TestIdiom from "@/components/features/test";
+import { ScrollToHash } from "@/components/ui/scroll-to-hash";
 
 export default function Home() {
   return (
     <>
+      <ScrollToHash />
       <Navbar />
       <Hero />
 
@@ -21,6 +24,10 @@ export default function Home() {
 
       <Reveal delay={0.1}>
         <Features />
+      </Reveal>
+
+      <Reveal delay={0.1}>
+        <TestIdiom />
       </Reveal>
 
       <Reveal delay={0.1}>
